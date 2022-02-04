@@ -9,9 +9,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/home")
 public class HomeController {
     
-    @GetMapping("/")
+    @GetMapping
     public String showHome(){
     return "home" ;
     }
+    
+    @GetMapping("/about/home")
+    public String hShowHome(){
+    return "home" ;
+    }
+    @GetMapping("/accessories/home")
+    public String accShowHome(){
+    return "home" ;
+    }
+    @GetMapping("/contact/home")
+    public String cShowHome(){
+    return "home" ;
+    }
+    @GetMapping("/mobil/home")
+    public String mShowHome(){
+    return "home" ;
+    }
+    @GetMapping("/shop_all/home")
+    public String shShowHome(){
+    return "home" ;
+    }
+    @GetMapping("/tablets/home")
+    public String tShowHome(){
+    return "home" ;
+    }
+    
+    
     
 }

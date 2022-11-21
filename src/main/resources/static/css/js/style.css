@@ -190,29 +190,49 @@ section nav{
 
 }
 
+/*.sag{
+  float: right;
+
+}*/
+
 .about{
 width: 1000px;
-/* margin: auto; */
+ margin: auto; 
 padding-top: 40px;
 padding-left: 50px;
 font-size: 15px;
-
+color: black;
 }
 
 .abt{
-padding-left: 60px;
+padding-left: 10px;
 
 }
+
+.it{
+  height: 450px; 
+    
+}
+
 
 .meet{
   background-color: lightgray;
   color: black;
-  padding-left: 110px;
+/*  padding-left: 110px;*/
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding-top: 60px;
   padding-bottom: 30px;
 
 }
+
+.team{
+ padding: 20px;
+ margin-left: 80px;
+ word-spacing: 0,1 px;
+ line-height: 0.5px;
+}
+
+
 
 .meet table td{
   padding: 20px;
@@ -272,8 +292,11 @@ padding: 60px;
    padding-left: 50px;
    margin-left: 50px;
  }
-
-
+ 
+ h5 p{
+    padding-left: 70px; 
+    
+ }
 
 /* CHATBOX
 =============== */

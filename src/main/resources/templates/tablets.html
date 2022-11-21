@@ -56,10 +56,10 @@
                 <a class="nav-link" href="/contact">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/showMyLoginPage">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="/cart">Cart</a>
               </li>
         
            
@@ -76,9 +76,9 @@
         <li><a href="">Filter by</a></li>
         <li class="col"><a href="#">Collection</a>
           <ul class="navbarNavDropdown" style="display: none;">
-             <li><a href="mobil.html">Mobile Phones</a></li>
-             <li><a href="tablets.html">Tablets</a></li>
-             <li><a href="accesories.html">Accessories</a></li>
+             <li><a href="/mobil">Mobile Phones</a></li>
+             <li><a href="/tablets">Tablets</a></li>
+             <li><a href="/accessories">Accessories</a></li>
           </ul>
         </li>
         <li class="pri"><a href="#">Price</a>
@@ -105,22 +105,19 @@
         
     
           <div id="tablett">
-          <table>
-          <tr>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_78b476c8638e4922b177a9f48fe24059~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_78b476c8638e4922b177a9f48fe24059~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_cc69426f6f2d493ca368e47acd0bca09~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_cc69426f6f2d493ca368e47acd0bca09~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_87e28b4682504f199db8481bac083d06~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_87e28b4682504f199db8481bac083d06~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-          </tr>
-          <tr>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_ad974d8560264ce7a09f33ef0e804c3d~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_ad974d8560264ce7a09f33ef0e804c3d~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_ff21327745a54efcb3190cda6fb3aa0c~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_ff21327745a54efcb3190cda6fb3aa0c~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_1c04d5f8ea3946b88f947ff29328a741~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_1c04d5f8ea3946b88f947ff29328a741~mv2_d_1440_1920_s_2.webp" alt="" data-price="599"><h5><b>I"m a product</b></h5><br> <h6>$599,00</h6><button class="add">Add to Card</button></td>
-          </tr>
-          
-          
-
-    
-          </table>
+          <div class="container">
+            <div class="row mb-3">
+                <div th:each = "tablet:${tablets}">
+                    <div style="width: 350px" class="col-4 text-center">
+                        <img th:src = "${tablet.picture}" width="250" height="250">
+                        <h5><p th:text = "${tablet.name}"></p></h5>
+                        <h5><p th:text = "${tablet.price}"></p></h5>
+                        
+                        <button class="add">Add to Card</button>
+                 </div>   
+                </div>  
+          </div>   
+        </div>
         </div>
     <!-- sonun baslngici -->
     

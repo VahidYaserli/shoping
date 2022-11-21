@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--<!doctype html>-->
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -17,7 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/js/style.css">
 
 
@@ -56,10 +56,10 @@
                 <a class="nav-link" href="/contact">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/showMyLoginPage">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="/cart">Cart</a>
               </li>
         
             
@@ -75,9 +75,9 @@
               <li><a href="">Filter by</a></li>
               <li class="col"><a href="#">Collection</a>
                 <ul class="navbarNavDropdown" style="display: none;">
-                   <li><a href="mobil.html">Mobile Phones</a></li>
-                   <li><a href="tablets.html">Tablets</a></li>
-                   <li><a href="accesories.html">Accessories</a></li>
+                   <li><a href="/mobil">Mobile Phones</a></li>
+                   <li><a href="/tablets">Tablets</a></li>
+                   <li><a href="/accessories">Accessories</a></li>
                 </ul>
               </li>
               <li class="pri"><a href="#">Price</a>
@@ -101,48 +101,31 @@
               </ul>
       </nav>
           </section>
-        <nav>
     
     
-          <table>
-          <tr>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_036cd95f7fed4e3696e01f081166799f~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_036cd95f7fed4e3696e01f081166799f~mv2_d_1440_1920_s_2.webp" alt="" data-price="669">
-              <h5><b>I"m a product</b></h5><br> <h6>$669,00</h6>
-              <button class="add">Add to Card</button>
-            </td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_133511a3060844a1970ae5880483e695~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_133511a3060844a1970ae5880483e695~mv2_d_1440_1920_s_2.webp" alt="" data-price="669">
-              <h5><b>I"m a product</b></h5><br> <h6>$669,00</h6>
-              <button class="add">Add to Card</button>
-            </td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_51c0660f81a944bcb70b7ec3a226d15d~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_51c0660f81a944bcb70b7ec3a226d15d~mv2_d_1440_1920_s_2.webp" alt="" data-price="669">
-              <h5><b>I"m a product</b></h5><br> <h6>$669,00</h6>
-              <button class="add">Add to Card</button>
-            </td>
-          </tr>
-          <tr>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_d4ce8dbd7be046b8b8ff9f2e5480a3d4~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_d4ce8dbd7be046b8b8ff9f2e5480a3d4~mv2_d_1440_1920_s_2.webp" alt="" data-price="669">
-            <h5><b>I"m a product</b></h5><br> <h6>$669,00</h6>
-            <button class="add">Add to Card</button>
-          </td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_fa790fd4409b44c993afe93b6cd979f7~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_fa790fd4409b44c993afe93b6cd979f7~mv2_d_1440_1920_s_2.webp" alt="" data-price="667">
-            <h5><b>I"m a product</b></h5><br> <h6>$677,00</h6> 
-            <button class="add">Add to Card</button></td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_634ef820b55a4dbc8c8cd165bf9090cd~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_634ef820b55a4dbc8c8cd165bf9090cd~mv2_d_1440_1920_s_2.webp" alt="" data-price="669">
-            <h5><b>I"m a product</b></h5><br> <h6>$669,00</h6>
-            <button class="add">Add to Card</button></td>
-          </tr>
-          <tr> 
-            <td><img src="https://static.wixstatic.com/media/82fcd3_9138b2f66e78470baea4feb3a3989b1a~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_9138b2f66e78470baea4feb3a3989b1a~mv2_d_1440_1920_s_2.webp" alt="" data-price="569"><h5><b>I"m a product</b></h5><br> <h6>$569,00</h6>
-              <button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_5509859d3a9743e997d289390bfa4e5a~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_5509859d3a9743e997d289390bfa4e5a~mv2_d_1440_1920_s_2.webp" alt="" data-price="469"><h5><b>I"m a product</b></h5><br> <h6>$469,00</h6>
-              <button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_6084f6cc7dd04170bfcd00125ce7ea55~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_6084f6cc7dd04170bfcd00125ce7ea55~mv2_d_1440_1920_s_2.webp" alt="" data-price="390"><h5><b>I"m a product</b></h5><br> <h6>$390,00</h6>
-              <button class="add">Add to Card</button></td>
-          </tr>
-          
+        <div class="container">
+            <div class="row mb-3">
+                <div th:each = "mobil:${mobiles}">
+                    <div style="width: 350px" class="col-4 text-center">
+                        <img th:src = "${mobil.picture}" width="250" height="250">
+                        <h5><p th:text = "${mobil.name}"></p></h5>
+                        <h5><p th:text = "${mobil.price}"></p></h5>
+             
+            <!--<input type="number" id="quantity" name="quantity" min="0" value="1">-->            
+            <a th:href="${'/cart/buy/'+ mobil.getId()+ 'mobils'}">
+                <button class="add">Add To Cart</button>
+            </a>
 
-    
-          </table>
+                        <!--buy/{id}/{productType}-->
+                        <!--<button class="add">Add to Card</button>-->
+                 </div>   
+                </div>  
+          </div>   
+        </div>
+        
+        
+        
+      
     
     <!-- sonun baslngici -->
     

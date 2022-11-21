@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
@@ -56,10 +56,10 @@
                 <a class="nav-link" href="/contact">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/showMyLoginPage">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+               <a class="nav-link" href="/cart">Cart</a>
               </li>
         
             
@@ -76,9 +76,9 @@
               <li><a href="">Filter by</a></li>
               <li class="col"><a href="#">Collection</a>
                 <ul class="navbarNavDropdown" style="display: none;">
-                   <li><a href="mobil.html">Mobile Phones</a></li>
-                   <li><a href="tablets.html">Tablets</a></li>
-                   <li><a href="accesories.html">Accessories</a></li>
+                   <li><a href="/mobil">Mobile Phones</a></li>
+                   <li><a href="/tablets">Tablets</a></li>
+                   <li><a href="/accessories">Accessories</a></li>
                 </ul>
               </li>
               <li class="pri"><a href="#">Price</a>
@@ -104,26 +104,19 @@
         <nav>
     
     
-          <table>
-          <tr>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_4cd855833c7d4d608400c76c8048aae8~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_4cd855833c7d4d608400c76c8048aae8~mv2_d_1440_1920_s_2.webp" alt="" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_93e3ed3a7844429cb0ddc4404b52365c~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_93e3ed3a7844429cb0ddc4404b52365c~mv2_d_1440_1920_s_2.webp" alt="" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_9e8de1b971c9457780c85f71d73501e5~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_9e8de1b971c9457780c85f71d73501e5~mv2_d_1440_1920_s_2.webp" alt="" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-          </tr>
-          <tr>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_a0fa810bfaac4e67ab6f6676c2016b6d~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_a0fa810bfaac4e67ab6f6676c2016b6d~mv2_d_1440_1920_s_2.webp" alt="" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_b9db648977d24c77b52dc8dcd9c2c660~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_b9db648977d24c77b52dc8dcd9c2c660~mv2_d_1440_1920_s_2.webp" alt="" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-          <td><img src="https://static.wixstatic.com/media/82fcd3_3691a03730ec4fc6aa0cc97b7bf54c49~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_3691a03730ec4fc6aa0cc97b7bf54c49~mv2_d_1440_1920_s_2.webp" data-price="669"><h5><b>I"m a product</b></h5><br> <h6>$669,00</h6><button class="add">Add to Card</button></td>
-          </tr>
-          <tr> 
-            <td><img src="https://static.wixstatic.com/media/82fcd3_8ebe0dcd88cc40fd9e88ab414605a96c~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_8ebe0dcd88cc40fd9e88ab414605a96c~mv2_d_1440_1920_s_2.webp" alt="" data-price="99"><h5><b>I"m a product</b></h5><br> <h6>$99,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_6e17a09cfb094ed985f6ef2d85892679~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_6e17a09cfb094ed985f6ef2d85892679~mv2_d_1440_1920_s_2.webp" alt="" data-price="67"><h5><b>I"m a product</b></h5><br> <h6>$67,00</h6><button class="add">Add to Card</button></td>
-            <td><img src="https://static.wixstatic.com/media/82fcd3_653c865fe1a24b9fa9907e10aa8e06a4~mv2_d_1440_1920_s_2.png/v1/fill/w_206,h_275,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_653c865fe1a24b9fa9907e10aa8e06a4~mv2_d_1440_1920_s_2.webp" alt="" data-price="89"><h5><b>I"m a product</b></h5><br> <h6>$89,00</h6><button class="add">Add to Card</button></td>
-          </tr>
-          
-
-    
-          </table>
+           <div class="container">
+            <div class="row mb-3">
+                <div th:each = "acs:${accessories}">
+                    <div style="width: 250px" class="col-4 text-center">
+                        <img th:src = "${acs.picture}" width="250" height="250">
+                        <h5><p th:text = "${acs.name}"></p></h5>
+                        <h5><p th:text = "${acs.price}"></p></h5>
+                        
+                        <button class="add">Add to Card</button>
+                 </div>   
+                </div>  
+          </div>   
+        </div>
     
     <!-- sonun baslngici -->
     

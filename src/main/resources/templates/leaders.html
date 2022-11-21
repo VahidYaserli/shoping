@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>LEADERS Home Page</title>
+    </head>
+    <body>
+        
+        <div th:if="${session.user}" >
+	<p th:text="'First name: ' + ${session.user.firstName} + ', Last name: ' + ${session.user.lastName} + ', Email: ' + ${session.user.email}"></p>
+</div>
+
+
+
+<hr>
+
+<a th:href="@{/}">Back to Home Page</a>
+        
+    </body>
+</html>

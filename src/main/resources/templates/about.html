@@ -1,181 +1,204 @@
 <!DOCTYPE html>
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/js/style.css">
+        <link rel="stylesheet" th:href="@{/css/js/style.css}">
 
 
-    <title>About Us</title>
-  </head>
-  <body>
+        <title>About Us</title>
+    </head>
+    <body>
 
-    <!-- menu baslangic -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><h3>Toggle Center</h3></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/shop_all">Shop All</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/mobil">Mobile Phones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/tablets">Tablets</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/accessories">Accessories</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
-              </li>
-        
-           
-          </ul>
-        </div>
-      </nav>
-    
-      <div id="shop1">
+        <!-- menu baslangic -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><h3>Toggle Center</h3></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop_all">Shop All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mobil">Mobile Phones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tablets">Tablets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart</a>
+                    </li>
 
-        <div class="abt"> 
 
-        <div id="shop2">     <h1><b> About Us  ______________________________________</b></h1>  </div>
-        
-     <div class="about">
-      <img src="https://static.wixstatic.com/media/82fcd3_8936d892fc114098adcad291d1cf0631~mv2_d_2963_1954_s_2.jpg/v1/fill/w_618,h_415,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_8936d892fc114098adcad291d1cf0631~mv2_d_2963_1954_s_2.webp" alt="" class="sol">
+                </ul>
+            </div>
+        </nav>
+
+        <div id="shop1">
+
+            <div class="abt"> 
+
+                <div id="shop2">     <h1><b> About Us  ______________________________________</b></h1>  </div>
+
+                <div class="about">
+                    <div th:each = "about:${abt}"> 
+                    <div class="it">
+                            <img th:src = "${about.picture}" width="550" height="400" class="sol"> 
+                            <h4><p th:text = "${about.text}"></p></h4>
+                        
+
+                    </div>   
+                </div>
+                        </div>
+            </div>
+           </div>
+
        
-      I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. <br> <br>
-This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.
 
-     </div>
 
+    <div class="meet"><p><h3><b> Meet the Team </b></h3><p>
+           
+           <div class="team">
+            <div class="row mb-3">
+                <div th:each = "team:${teamabo}">
+<!--                    <div style="width: 250px" class="col-4 text-center">-->
+                        <img th:src = "${team.picture}" width="250" height="300">
+                        <h5><p th:text = "${team.name}"></p></h5>
+                        <h5><p th:text = "${team.description}"></p></h5>
+                        
+<!--                 </div>   -->
+                </div>  
+          </div>   
+        </div>  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<!--        <table>
+            <tr>
+                <td><img src="https://static.wixstatic.com/media/82fcd3_6c13b705ba6d4bf6bbdaa1036aa43f72~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_6c13b705ba6d4bf6bbdaa1036aa43f72~mv2_d_1200_1560_s_2.webp" alt=""></td>
+                <td><img src="https://static.wixstatic.com/media/82fcd3_88aff59a67cf442f9beb3caf7774e508~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_88aff59a67cf442f9beb3caf7774e508~mv2_d_1200_1560_s_2.webp" alt=""></td>
+                <td><img src="https://static.wixstatic.com/media/82fcd3_d3c361e8d39a4269835adf7245378ec3~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_d3c361e8d39a4269835adf7245378ec3~mv2_d_1200_1560_s_2.webp" alt=""></td>
+            </tr>
+            <tr>
+                <td><p><h5><b> Jonny Butler </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6> </td>
+                <td><p><h5><b> Jennie Welch </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6></td>
+                <td><p><h5><b> Randall Holt </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6></td> 
+            </tr>
+
+        </table>-->
 
     </div>
 
 
+    <!-- sonun baslngici -->
+
+    <div id="black">
+        <table>
+            <tr>
+                <td><h1> Be the First to Know <br>
+                        About Deals and <br>
+                        Special Offers
+                    </h1></td>
+                <td>
+                    <form action="" id="emaill">
+                        <input type="email" id="email" name="email" placeholder="Enter your email here*">
+                        <button id="butn">Subscribe Now</button>
+
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <div id="how">
+            <table>
+                <tr>
+                    <td><h4><b><p>How can we help?</p></b></h4></td>
+                <span><td><h1><b>___________________________________________</b></h1></td><span>
+                        </tr>
+                        </table>
+
+                        </div>
+
+                        </div>
+
+                        <div id="info">
+                            <table cellpadding="10">
+                                <tr>
+                                    <td> Customer Service</td>
+                                    <td>Shop All</td>
+                                    <td>FAQ</td>
+                                    <td> <a href="https://www.facebook.com/">Facebook</a></td>
+                                </tr>
+                                <tr>
+                                    <td>123-456-7890</td>
+                                    <td>Mobil Phones</td>
+                                    <td>Shipping & Returnes</td>
+                                    <td> <a href="https://www.twitter.com/"> Twitter</a></td>
+                                </tr>
+                                <tr> 
+                                    <td>info@my-domain.com</td>
+                                    <td>Tablets</td>
+                                    <td>Story Policy</td>
+                                    <td> <a href="https://www.instagram.com/"> Instagram</a></td></tr>
+                                <tr> 
+                                    <td>500 Terry Francois Street</td>
+                                    <td>Accessories</td>
+                                    <td>Payment Methods</td>
+                                    <td> <a href="https://youtube.com/"> YouTube</a></td></tr>
+                                <tr> 
+                                    <td> San Francisco, CA 94158</td>
+                                    <td>About</td>
+                                    <td></td>
+                                    <td></td></tr>
+                                <tr> 
+                                    <td></td>
+                                    <td>Contact</td>
+                                    <td></td>
+                                    <td></td></tr>
+                            </table>
+                        </div>
+                        </div>
 
 
-</div>
 
-<div class="meet"><p><h3><b> Meet the Team </b></h3><p>
-
-<table>
-<tr>
-    <td><img src="https://static.wixstatic.com/media/82fcd3_6c13b705ba6d4bf6bbdaa1036aa43f72~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_6c13b705ba6d4bf6bbdaa1036aa43f72~mv2_d_1200_1560_s_2.webp" alt=""></td>
-    <td><img src="https://static.wixstatic.com/media/82fcd3_88aff59a67cf442f9beb3caf7774e508~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_88aff59a67cf442f9beb3caf7774e508~mv2_d_1200_1560_s_2.webp" alt=""></td>
-    <td><img src="https://static.wixstatic.com/media/82fcd3_d3c361e8d39a4269835adf7245378ec3~mv2_d_1200_1560_s_2.jpg/v1/fill/w_300,h_390,al_c,q_80,usm_0.66_1.00_0.01/82fcd3_d3c361e8d39a4269835adf7245378ec3~mv2_d_1200_1560_s_2.webp" alt=""></td>
-</tr>
-<tr>
-    <td><p><h5><b> Jonny Butler </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6> </td>
-    <td><p><h5><b> Jennie Welch </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6></td>
-    <td><p><h5><b> Randall Holt </b></h5><p> <br> <h6>I'm a title. Click here to add your <br> own text and edit me.</h6></td> 
-</tr>
-
-</table>
-
-</div>
+                        </div>
 
 
-<!-- sonun baslngici -->
-    
-<div id="black">
-    <table>
-      <tr>
-        <td><h1> Be the First to Know <br>
-         About Deals and <br>
-        Special Offers
-    </h1></td>
-        <td>
-         <form action="" id="emaill">
-          <input type="email" id="email" name="email" placeholder="Enter your email here*">
-          <button id="butn">Subscribe Now</button>
-  
-         </form>
-        </td>
-      </tr>
-    </table>
-     
-    <div id="how">
-     <table>
-     <tr>
-         <td><h4><b><p>How can we help?</p></b></h4></td>
-       <span><td><h1><b>___________________________________________</b></h1></td><span>
-     </tr>
-     </table>
-  
-    </div>
-  
-   </div>
-  
-   <div id="info">
-    <table cellpadding="10">
-     <tr>
-       <td> Customer Service</td>
-       <td>Shop All</td>
-       <td>FAQ</td>
-       <td> <a href="https://www.facebook.com/">Facebook</a></td>
-      </tr>
-    <tr>
-       <td>123-456-7890</td>
-       <td>Mobil Phones</td>
-       <td>Shipping & Returnes</td>
-       <td> <a href="https://www.twitter.com/"> Twitter</a></td>
-      </tr>
-    <tr> 
-       <td>info@my-domain.com</td>
-       <td>Tablets</td>
-       <td>Story Policy</td>
-       <td> <a href="https://www.instagram.com/"> Instagram</a></td></tr>
-   <tr> 
-       <td>500 Terry Francois Street</td>
-       <td>Accessories</td>
-       <td>Payment Methods</td>
-       <td> <a href="https://youtube.com/"> YouTube</a></td></tr>
-     <tr> 
-       <td> San Francisco, CA 94158</td>
-       <td>About</td>
-       <td></td>
-       <td></td></tr>
-   <tr> 
-       <td></td>
-       <td>Contact</td>
-       <td></td>
-       <td></td></tr>
-    </table>
-   </div>
-  </div>
-  
-  
-  
-  </div>
-
-
-      <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+                        <!-- Optional JavaScript -->
+                        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                        </body>
+                        </html>
